@@ -4,6 +4,7 @@ from langchain_openai import ChatOpenAI
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langgraph.checkpoint.sqlite import SqliteSaver
 from typing import TypedDict, Annotated
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import operator
 import os
@@ -128,6 +129,15 @@ class UserInput(BaseModel):
     query: str
 
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins. Change to a specific domain in production for security.
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
+)
 
 @app.post("/research")
 async def research_endpoint(user_input: UserInput):
