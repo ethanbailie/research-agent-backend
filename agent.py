@@ -58,7 +58,7 @@ comparison_prompt = """You are an expert in identifying automation opportunities
             {
             "name": "Operation Name",
             "description": "Automation description",
-            "unique_perspective": "why should this me automated",
+            "unique_perspective": "why should this be automated",
             "cost_savings": "20%"
             }
         ],
