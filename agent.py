@@ -57,6 +57,7 @@ comparison_prompt = """You are an expert in identifying the unique selling point
     You are given a user's idea and you must compare it with the unique selling points of the top companies in the space. \
 
     Return the user's idea and the unique selling points of the top companies in the space, as well as whether the user's idea is actually unique compared to the other companies.
+    If the user's idea overlaps with the unique selling points of the other companies, you must say that it is not unique.
 
     The output MUST be in the following JSON format:
     {
