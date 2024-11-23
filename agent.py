@@ -50,6 +50,7 @@ comparison_prompt = """You are an expert in identifying automation opportunities
     You are given a list of company operations with oppotunity for AI automation and you must assess the cost-saving potential of each. \
 
     Return the a general overview of automation suggestions and the unique opportunities suggested.
+    Within the general overview, YOU MUST ADD an estimate for cost savings (in percentage savings) if the operation was automated.
 
     The output MUST be in the following JSON format:
     {
@@ -61,7 +62,7 @@ comparison_prompt = """You are an expert in identifying automation opportunities
             }
         ],
         "validation": {
-            "automation_validity": "There are opportunities with xyz for AI agents to automate them because of abc"
+            "automation_validity": "By implementing these changes you can save between x and y percent of your costs. There are opportunities with xyz for AI agents to automate them because of abc"
         }
     }
 
