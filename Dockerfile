@@ -15,13 +15,6 @@ COPY . .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set environment variables
-ENV PYTHONUNBUFFERED=1
-ENV TAVILY_API_KEY=""
-ENV PINECONE_API_KEY=""
-ENV COHERE_API_KEY=""
-ENV OPENAI_API_KEY=""
-
 # Expose port 8000 for the FastAPI app
 EXPOSE 8000
 
