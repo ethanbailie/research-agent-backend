@@ -27,11 +27,10 @@ memory = stack.enter_context(SqliteSaver.from_conn_string(":memory:"))
 class ResearcherState(TypedDict):
     messages: Annotated[list[AnyMessage], operator.add]
 
-research_prompt = """You an expert in market analysis. \
-    You are given a user's idea and you must gather research on the largest companies related to that idea or domain. \
+research_prompt = """You an expert in agentic research. \
+    You are given a company's operations and you must describe cost-saving measures from utilizing AI agents. \
 
-    If you do not have the information to accurately describe the major companies in the space or related to the idea, you must perform a search to find the most relevant information. \
-    Return the research gathered on the companies.
+    If you do not have the information to accurately make a recommendation, you must perform a search to find the most relevant information. \
 
     Examples:
     Input: 
