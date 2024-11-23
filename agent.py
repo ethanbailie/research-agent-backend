@@ -7,7 +7,7 @@ from typing import TypedDict, Annotated
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import operator
-import os
+import json
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -169,7 +169,7 @@ async def research_endpoint(user_input: UserInput):
                 if attempts == 3:
                     raise HTTPException(status_code=500, detail="Failed to process request after 3 attempts")
         
-        return {"result": all_messages[-1].content}
+        return {"result": json.loads(all_messages[-1].content)}
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
