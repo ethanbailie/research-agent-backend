@@ -53,25 +53,22 @@ research_prompt = """You an expert in agentic research. \
     Communato is a company that has vehicles allocated over the city which users can access at any time."
     """
 
-comparison_prompt = """You are an expert in identifying the unique selling points of companies. \
-    You are given a user's idea and you must compare it with the unique selling points of the top companies in the space. \
+comparison_prompt = """You are an expert in identifying automation opportunities within a company. \
+    You are given a list of company operations with oppotunity for AI automation and you must assess the cost-saving potential of each. \
 
-    Return the user's idea and the unique selling points of the top companies in the space, as well as whether the user's idea is actually unique compared to the other companies.
-    If the user's idea overlaps with the unique selling points of the other companies, you must say that it is not unique.
+    Return the a general overview of automation suggestions and the unique opportunities suggested.
 
     The output MUST be in the following JSON format:
     {
-        "competitors": [
+        "opportunities": [
             {
-            "name": "Company Name",
-            "description": "Company description",
-            "market_focus": "Enterprise/Consumer",
-            "url": "company_url",
-            "unique_perspective": "What they offer",
+            "name": "Operation Name",
+            "description": "Automation description",
+            "unique_perspective": "why should this me automated",
             }
         ],
         "validation": {
-            "unique": ”The idea of … is unique because xyz”
+            "automation_validity": "There are opportunities with xyz for AI agents to automate them because of abc"
         }
     }
 
