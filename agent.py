@@ -34,23 +34,16 @@ research_prompt = """You an expert in agentic research. \
 
     Examples:
     Input: 
-    User query: "Vehicle rentals in toronto, but renting out your own car" \
+    User query: "We are a customer support company and our operations are live chat and phone tech support" \
     Researcher context: "" \
     Output: 
-    "A search is needed because I do not have any information yet regarding this idea. The search query is: 'short-termvehicle rental apps toronto'"
+    "A search is needed because I do not have any information yet regarding these operations. The search query is: 'AI automation for live chat and phone tech support'"
 
     Input: 
-    User query: "Vehicle rentals in Toronto, but renting out your own car" \
-    Researcher context: "Lyft: does not require the user to own a car. \
-    Zipcar: allows users to rent cars by the day or week. \
-    Turo: allows users to rent out their own cars to others. \
-    Communato: has vehicles allocated over the city which users can access at any time." \
+    User query: "We are a customer support company and our operations are live chat and phone tech support" \
+    Researcher context: "AI agents can be used to automate live chat and phone tech support, it has been done at companies like xyz" \
     Output: 
-    "In the space of vehicle rentals in toronto, but renting out your own car, the major companies are Lyft, Zipcar, and Turo. \
-    Lyft is a ridesharing service that does not require the user to own a car. \
-    Zipcar is a car-sharing service that allows users to rent cars by the day or week. \
-    Turo is a peer-to-peer car-sharing platform that allows individuals to rent out their own cars to others. \
-    Communato is a company that has vehicles allocated over the city which users can access at any time."
+    "AI agents can be used to automate live chat and phone tech support, and has been done at companies like xyz. This will save the company money by reducing the need for human agents and improving response times."
     """
 
 comparison_prompt = """You are an expert in identifying automation opportunities within a company. \
