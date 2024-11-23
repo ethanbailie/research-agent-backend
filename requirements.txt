@@ -9,3 +9,5 @@ pandas
 langchain_core
 langgraph-checkpoint-sqlite
 sqlalchemy
+fastapi
+uvicorn
